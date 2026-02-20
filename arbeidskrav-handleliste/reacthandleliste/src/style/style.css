@@ -1,0 +1,123 @@
+/* Reset / grunnoppsett */
+* {
+  box-sizing: border-box;
+  font-family: system-ui, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #1e1e1e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Kortet */
+main {
+  background-color: #ffffff;
+  width: 320px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Overskrift */
+h1 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 32px;
+}
+
+/* Skjema */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+label {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: #111111;
+}
+
+/* Input-felt */
+
+input[type="text"],
+input[type="number"] {
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #111111;
+}
+
+
+/* Knapp */
+button {
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 14px;
+  border: none;
+  background-color: #111;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+/* Handleliste */
+section {
+  margin-top: 16px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* En vare */
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+/* Checkbox + tekst */
+li label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+/* Antall-felt i liste */
+li input[type="number"] {
+  width: 60px;
+  padding: 6px;
+}
+
+li span {
+  flex: 1;
+  color: #111;
+}
+
+h1 {
+  color: #111111;
+}
+
+input[type="checkbox"] {
+  accent-color: #0066ff;
+  width: 16px;
+  height: 16px;
+}

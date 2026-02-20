@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <title>Arbeidskrav 2 – Handleliste</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Egen CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<main>
+  <h1>Handleliste</h1>
+
+  <form id="handleForm">
+    <label>
+      Vare
+      <input type="text" id="vare" placeholder="Egg" required>
+    </label>
+
+    <label>
+      Antall
+      <input type="number" id="antall" value="1" min="1">
+    </label>
+
+    <button type="submit">Legg til vare</button>
+  </form>
+
+  <section>
+    <ul id="liste">
+      <li>
+        <label>
+          <input type="checkbox">
+          Melk
+        </label>
+        <input type="number" value="2" min="1">
+      </li>
+
+      <li>
+        <label>
+          <input type="checkbox" checked>
+          Egg
+        </label>
+        <input type="number" value="1" min="1">
+      </li>
+    </ul>
+  </section>
+</main>
+
+<noscript>
+  Denne applikasjonen krever at JavaScript er aktivert.
+</noscript>
+
+<script>
+  const form = document.getElementById("handleForm");
+  const liste = document.getElementById("liste");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const vare = document.getElementById("vare").value;
+    const antall = document.getElementById("antall").value;
+
+    if (!vare) return;
+
+    const li = document.createElement("li");
+
+    const label = document.createElement("label");
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+
+    label.appendChild(checkbox);
+    label.append(" " + vare);
+
+    const number = document.createElement("input");
+    number.type = "number";
+    number.value = antall;
+    number.min = 1;
+
+    li.appendChild(label);
+    li.appendChild(number);
+
+    liste.appendChild(li);
+
+    form.reset();
+    document.getElementById("antall").value = 1;
+  });
+</script>
+
+</body>
+</html>
